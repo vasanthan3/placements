@@ -1,0 +1,55 @@
+1.Write a program to accept N values into an integer array and display the contents of the array in the reverse order.
+
+#include <stdio.h>
+int main() {
+ int n;
+ scanf("%d",&n);
+ int arr[n];
+ for(int i=0;i<n;i++)
+     scanf("%d",&arr[i]);
+for(int j=n-1;j>=0;j--)
+printf("%d ",arr[j]);
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------------------------------------------
+2.Write a  program to count the number of 0s and 1s in an array that is in random order. You may assume that the array consists of only 0s and 1s.
+
+#include <stdio.h>
+
+int main() {
+ int n,zeros=0,ones=0;
+ scanf("%d",&n);
+ int arr[n];
+ for(int i=0;i<n;i++)
+     scanf("%d",&arr[i]);
+for(int j=0;j<n;j++)
+{
+    if(arr[j]==0)
+    zeros++;
+    if(arr[j]==1)
+    ones++;
+}
+printf("zeros:%d\nones:%d\n",zeros,ones);
+return 0;
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Write a  program to print the count of the elements in an array whose values are lesser than a key element in an unsorted array.
+#include <stdio.h>
+int main() {
+   int n,count=0,key;
+   scanf("%d",&n);
+   int arr[n];
+   for(int i=0;i<n;i++)
+   scanf("%d",&arr[i]);
+   printf("\nKEY value:");
+   scanf("%d",&key);
+   for(int j=0;j<n;j++)
+   {
+       if(key>arr[j])
+       count++;
+   }
+   printf("Count:%d",count);
+    return 0;
+}
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.Write a  Program to print all the repeated elements in a sorted array.
