@@ -1,0 +1,186 @@
+1.Factorial of a number with /without recursion
+#include<stdio.h>
+void main()
+{
+    int num,fact=1;
+    scanf("%d",&num);
+    for(int i=0;i<num;i++)
+      fact=fact*(num-i) ;
+    printf("%d",fact);
+}
+--------------------------------------------------------------------------------------------------------------
+2.Fibonacci series until limit
+#include<stdio.h>
+void main()
+{
+    int num,temp1=0,temp2=1,temp3;
+    scanf("%d",&num);
+    printf("%d %d ",temp1,temp2);
+    for(int i=2;i<num;i++)
+    {
+        temp3=temp1+temp2;
+        printf("%d ",temp3);
+        temp1=temp2;
+        temp2=temp3;
+    }
+}
+-----------------------------------------------------------------------------------------------------------------
+3.Nth digit in Fibonacci series
+#include<stdio.h>
+void main()
+{
+    int num,temp1=0,temp2=1,temp3,sum=0;
+    scanf("%d",&num);
+    int arr[num];
+    arr[0]=0,arr[1]=1;
+    
+    printf("%d %d ",temp1,temp2);
+    for(int i=2;i<num;i++)
+    {
+        arr[i]=temp1+temp2;
+        printf("%d ",arr[i]);
+        temp1=temp2;
+        temp2=arr[i];
+    }
+    printf("\nNth Digit:%d",arr[num-1]);
+}
+-----------------------------------------------------------------------------------------------------------------
+4.Sum of Fibonacci series
+#include<stdio.h>
+void main()
+{
+    int num,temp1=0,temp2=1,temp3,sum=0;
+    scanf("%d",&num);
+    int arr[num];
+    arr[0]=0,arr[1]=1;
+    
+    printf("%d %d ",temp1,temp2);
+    for(int i=2;i<num;i++)
+    {
+        arr[i]=temp1+temp2;
+        printf("%d ",arr[i]);
+        temp1=temp2;
+        temp2=arr[i];
+    }
+    for(int i=0;i<num;i++)
+    sum=sum+arr[i];
+    printf("\nSum:%d",sum);
+}
+------------------------------------------------------------------------------------------------------------
+5.Armstrong
+#include <stdio.h>
+#include <math.h>
+void main() {
+   int num,count=0,temp,temp1,digit=0,res=0;
+   scanf("%d",&num);
+   temp=num;
+   temp1=num;
+   while(temp>0)
+   {
+     temp=temp/10;
+       count++;
+   }
+   while(temp1>0)
+   {
+       digit =temp1%10;
+       res =res + pow(digit,count);
+       temp1=temp1/10;
+   }
+   if(num==res)
+     printf(It is Amstrong");
+   else
+     printf("It is not Amstrong ");
+}
+-------------------------------------------------------------------------------------------------------
+6.Palindrome
+#include<stdio.h>
+void main()
+{
+    int num,res=0,rem=0;
+    scanf("%d",&num);
+    int temp=num;
+    while(num>0)
+    {
+        rem=num%10;
+        res=res*10+rem;
+        num=num/10;
+    }
+    if(temp==res)
+    printf("Palindrome");
+    else
+     printf(" Not Palindrome");
+}
+--------------------------------------------------------------------------------------------------------
+7.Prime
+#include <stdio.h>
+int main() {
+    int num;
+    scanf("%d",&num);
+    int set=0;
+    for(int i=1;i<=num;i++)
+    {
+        if(num%i==0)
+        set++;
+    }
+    if(set==2)
+    printf("Its a Prime");
+    else
+    printf("Its not a Prime");
+    return 0;
+}
+-----------------------------------------------------------------------------------------------------------
+8.sand clock pattern
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   int n;
+   scanf("%d",&n);
+   for(int i=0;i<n;i++)
+   {
+       for(int j=0;j<i*2;j++){
+           printf(" ");}
+           for(int k=0;k<2*(n-i)-1;k++){
+               printf("* ");
+       }
+       printf("\n");
+   }
+   
+    for(int i=1;i<n;i++)
+   {
+       for(int j=1;j<2*(n-i)-1;j++){
+           printf(" ");}
+           for(int k=0;k<i*2+1;k++){
+               printf("* ");
+       }
+       printf("\n");
+   }
+    return 0;
+}
+----------------------------------------------------------------------------------------------------------------
+1012345
+   2345
+    345
+     45
+      5
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   int n;
+   scanf("%d",&n);
+   for(int i=1;i<=n;i++)
+   {
+       for(int j=1;j<=i;j++)
+       {
+           printf(" ");
+       }
+       for(int k=i;k<=n;k++)
+       {
+           printf("%d",k);
+       }
+       printf("\n");
+   }
+    return 0;
+}
+------------------------------------------------------------------------------------------------------------------------------------
