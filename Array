@@ -274,3 +274,31 @@ public class program {
 Example 1: Input: X=[1,2,3,4,5] Output: true 
 Example 2: Input: X=[3,4,5, 1,2,] Output: true
 Example 3: Input: X=[3,1,2,4,5] Output: false
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+14.Write a program  to remove the duplicates in an array 
+package Pratice;
+import java.util.Arrays;
+import java.util.Scanner;
+public class program {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int limit = sc.nextInt();
+        int[] arr = new int[limit];
+        for (int i = 0; i < limit; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int j=1;
+        for(int i=0;i<limit-1;i++){
+                if(arr[i]!=arr[i+1]){
+                    arr[j]=arr[i+1];
+                    j++;
+                }
+        }
+        for (int i=0;i<j;i++){
+            System.out.print(arr[i]);
+        }
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+15.Write a program  to find second largest and second smallest in array
+
