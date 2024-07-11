@@ -225,3 +225,52 @@ public class program {
     }
 }
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+11.Write a program  to swap every pair of  adjacent array elements
+package Pratice;
+import java.util.Arrays;
+import java.util.Scanner;
+public class program {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int limit = sc.nextInt();
+        int[] arr = new int[limit];
+        for (int i = 0; i < limit; i++) {
+            arr[i] = sc.nextInt();
+        }
+        for(int i=0;i<limit-1;i+=2){
+            int temp=arr[i];
+            arr[i]=arr[i+1];
+            arr[i+1]=temp;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+12.Write a program  to left rotate for given times of an array elements
+package Pratice;
+import java.util.Arrays;
+import java.util.Scanner;
+public class program {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int limit = sc.nextInt();
+        int rotate=sc.nextInt();
+        int[] arr = new int[limit];
+        for (int i = 0; i < limit; i++) {
+            arr[i] = sc.nextInt();
+        }
+        for(int i=0;i<rotate;i++){
+            int temp=arr[0];
+            for (int j=0;j<limit-1;j++){
+                arr[j]=arr[j+1];
+            }
+            arr[arr.length-1]=temp;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+13.Given an array X with n number of elements, return true if the given array X is sorted else return false. You may consider multiple positions may be shifted in the array X. 
+Example 1: Input: X=[1,2,3,4,5] Output: true 
+Example 2: Input: X=[3,4,5, 1,2,] Output: true
+Example 3: Input: X=[3,1,2,4,5] Output: false
