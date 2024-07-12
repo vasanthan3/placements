@@ -274,6 +274,49 @@ public class program {
 Example 1: Input: X=[1,2,3,4,5] Output: true 
 Example 2: Input: X=[3,4,5, 1,2,] Output: true
 Example 3: Input: X=[3,1,2,4,5] Output: false
+package Pratice;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class program_2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int limit = sc.nextInt();
+        int[] arr = new int[limit];
+        for (int i = 0; i < limit; i++) {
+            arr[i] = sc.nextInt();
+        }
+        boolean result=min(arr);
+        System.out.println(result);
+    }
+    public  static boolean min(int[] arr){
+        int min=arr[0];
+        int pos=arr[0],count=0;
+        for(int i=0;i<arr.length;i++){
+            if(min>arr[i]){
+                min=arr[i];
+                pos=i;
+            }
+        }
+        return sort(arr,arr.length,pos);
+
+    }
+    public static boolean sort(int[] arr,int limit,int pos){
+        int size=limit,count=0;
+        while (limit-1>=0){
+            if(arr[pos%size]<arr[(pos+1)%size]){
+                count++;
+            }
+            pos++;
+            limit--;
+        }
+        if (count==size-1){
+           return true;
+        }
+        return false;
+    }
+}
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 14.Write a program  to remove the duplicates in an array 
 package Pratice;
