@@ -9,4 +9,148 @@ public class programing {
         System.out.println(str);
     }
 }
-------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+2.Write a program in C to find the length of a string without using library functions.
+package Pratice;
+import java.util.Scanner;
+
+public class programing {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        String str=input.nextLine();
+       int count=0;
+       for (char ch:str.toCharArray()){
+           count++;
+       }
+        System.out.println(count);
+    }
+}
+-----------------------------------------------------------------------------------------------------
+3.Write a program in C to count the total number of alphabets, digits and special characters in a string.
+package Pratice;
+import java.util.Arrays;
+import java.util.Scanner;
+public class program {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        String str=input.nextLine();
+        char[] ch=str.toLowerCase().toCharArray();
+        int alphabet=0,digits=0,numbers=0;
+        for (int i=0;i<ch.length;i++){
+            if(ch[i]>='a'&&ch[i]<='z'){
+                alphabet++;
+            }
+            else if(ch[i]>='0'&&ch[i]<='9'){
+                numbers++;
+            }
+            else {
+                digits++;
+            }
+        }
+        System.out.print("Alphabets:"+alphabet+"\n"+"Numbers:"+numbers+"\n"+"Digits:"+digits);
+
+    }
+
+}
+----------------------------------------------------------------------------------------------------------
+4.Write a program in C to count the total number of vowels or consonants in a string.
+package Pratice;
+import java.util.Arrays;
+import java.util.Scanner;
+public class program {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        String str=input.nextLine();
+        String letter=str.toLowerCase();
+        int vowels=0,cons=0;
+        for (int i=0;i<letter.length();i++){
+                char ch=letter.charAt(i);
+            if(ch=='a' || ch=='e' ||ch=='i' || ch=='o' || ch=='u'){
+                vowels++;
+            }
+            else {
+                cons++;
+            }
+        }
+        System.out.print("Vowels:"+vowels+"\n"+"Consonants:"+cons);
+    }
+
+}
+-----------------------------------------------------------------------------------------------------------------------
+5.Write a program in C to convert string to uppercase
+package Pratice;
+import java.util.Arrays;
+import java.util.Scanner;
+public class program {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        String str=input.nextLine();
+        char[] ch=str.toCharArray();
+        for (int i=0;i<ch.length;i++){
+            if(ch[i]>='a'&&ch[i]<='z'){
+                ch[i]= (char) (ch[i]-32);
+            }
+        }
+        System.out.print(ch);
+    }
+
+}
+----------------------------------------------------------------------------------------------------------------------
+6.Write a program in C to convert string to lowercase
+package Pratice;
+import java.util.Arrays;
+import java.util.Scanner;
+public class program {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        String str=input.nextLine();
+        char[] ch=str.toCharArray();
+        for (int i=0;i<ch.length;i++){
+            if(ch[i]>='A'&&ch[i]<='Z'){
+                ch[i]= (char) (ch[i]+32);
+            }
+        }
+        System.out.print(ch);
+    }
+-----------------------------------------------------------------------------------------------------------------------
+7.Write a program in C to convert string to toggle case	
+package Pratice;
+import java.util.Arrays;
+import java.util.Scanner;
+public class program {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        String str=input.nextLine();
+        char[] ch=str.toCharArray();
+        for (int i=0;i<ch.length;i++){
+            if(ch[i]>='A'&&ch[i]<='Z'){
+                ch[i]= (char) (ch[i]+32);
+            }
+            else {
+                ch[i]= (char) (ch[i]-32);
+            }
+        }
+        System.out.print(ch);
+    }
+
+}
+------------------------------------------------------------------------------------------------------------------------------
+8.Write a program in C to count the total number of words in a string.
+package Pratice;
+import java.util.Arrays;
+import java.util.Scanner;
+public class program {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        String str=input.nextLine();
+        String[] split=str.split("\\s");
+        int count=0;
+        for (String a:split){
+            count++;
+        }
+        System.out.println(count);
+    }
+
+}
+-------------------------------------------------------------------------------------------------------------------------
+}
