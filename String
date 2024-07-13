@@ -1,0 +1,12 @@
+1.Write a program in C to input a string and print it.
+package Pratice;
+import java.util.Scanner;
+
+public class programing {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        String str=input.nextLine();
+        System.out.println(str);
+    }
+}
+------------------------------------------------------------------------
